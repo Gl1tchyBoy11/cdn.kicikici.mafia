@@ -1,23 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pterodactyl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .login-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 600px;
+            max-width: 90%;
+            display: flex;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            color: #333;
+        }
+
+        .left-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 20px;
+        }
+
+        .left-side img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .right-side {
+            flex: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            background-color: #333333;
+            border: 1px solid #e11d48; /* Czerwona obwódka błędu */
+            border-radius: 4px;
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .error-text {
+            color: #fca5a5;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b82f6;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-login:hover {
+            background-color: #2563eb;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+            text-decoration: none;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .register-text {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .register-text a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 11px;
+            color: #4b5563;
+        }
+        img {
+            width: 400px;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
 
-<p>For online documentation and support please refer to
-<a href="http://redtube.com/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://pornhub.com/">nginx.com</a>.</p>
+    <h2>Login to Continue</h2>
 
-<p><em>Thank you for using nginx.</em></p>
+    <div class="login-card">
+        <div class="left-side">
+            <img src="https://dash.stylefucker.pl/assets/svgs/pterodactyl.svg"alt="Pterodactyl Logo">
+        </div>
+        
+        <div class="right-side">
+            <form>
+                <div class="form-group">
+                    <label>Username or Email</label>
+                    <input type="text" value="">
+                    <div class="error-text">A username or email must be provided.</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" value="">
+                    <div class="error-text">Please enter your account password.</div>
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+                
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="register-text">
+        Don't have an account? <a href="#">Register here.</a>
+    </div>
+
+    <div class="footer">
+        Pterodactyl© 2015 - 2026 • Blueprint © 2023 - 2026
+    </div>
+
 </body>
 </html>
